@@ -41,7 +41,7 @@ namespace SampleCode
         }
 
         // Method with single parameter - MODIFIED: semantic suggestion for "is" prefix
-        public void CheckStatus(bool isActive, bool shouldActive)
+        public void CheckStatus(bool isActive, bool shouldBeActive)
         {
             if (isActive)
                 Console.WriteLine("Status is active");
