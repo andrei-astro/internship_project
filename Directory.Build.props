@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <!-- Custom build output directories for organized structure -->
+    <BaseIntermediateOutputPath>..\.net\obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+</Project>

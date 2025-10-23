@@ -1,0 +1,71 @@
+using System;
+
+namespace SampleCode
+{
+    public class Calculator
+    {
+        // Method with single parameter - MODIFIED: duplicated parameter with suggested name
+        public int Square(int number, int alternativeNumber)
+        {
+            return number * number;
+        }
+
+        // Method with single parameter - MODIFIED: semantic suggestion for "value"
+        public string FormatText(string value, string newValue)
+        {
+            return value.ToUpper();
+        }
+
+        // Method with no parameters - UNCHANGED
+        public void Reset()
+        {
+            Console.WriteLine("Calculator reset");
+        }
+
+        // Method with multiple parameters - UNCHANGED
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
+
+        // Method with single parameter - MODIFIED: semantic suggestion for "input"
+        public bool ValidateInput(string input, string secondInput)
+        {
+            return !string.IsNullOrEmpty(input);
+        }
+
+        // Method with single parameter - MODIFIED: number increment
+        public void ProcessItem1(object item1, object item2)
+        {
+            Console.WriteLine($"Processing: {item1}");
+        }
+
+        // Method with single parameter - MODIFIED: semantic suggestion for "is" prefix
+        public void CheckStatus(bool isActive, bool shouldActive)
+        {
+            if (isActive)
+                Console.WriteLine("Status is active");
+        }
+    }
+
+    public class DataProcessor
+    {
+        // Static method with single parameter - MODIFIED: semantic suggestion for "data"
+        public static void ProcessData(byte[] data, byte[] additionalData)
+        {
+            Console.WriteLine($"Processing {data.Length} bytes");
+        }
+
+        // Generic method with single parameter - MODIFIED: semantic suggestion for "item"
+        public T Transform<T>(T item, T otherItem) where T : class
+        {
+            return item;
+        }
+
+        // Method with single parameter having modifiers - MODIFIED: semantic suggestion for "count"
+        public void UpdateReference(ref int count, ref int maxCount)
+        {
+            count++;
+        }
+    }
+}
